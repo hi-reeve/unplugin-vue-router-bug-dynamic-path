@@ -6,7 +6,7 @@
 
 <style scoped></style>
 
-<route lang="json">
+<route>
 {
     "name": "other",
     "layout": "other"

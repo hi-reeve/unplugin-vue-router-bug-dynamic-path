@@ -29,14 +29,10 @@
 
 <style scoped></style>
 
-<route>
-{
-    "name": "home",
-    "meta": {
-        "permission": {
-            "subject": "read",
-            "action": "Do something permission"
-        }
-    }
-}
+<route lang="yaml">
+name: home
+meta: 
+ permission:
+  subject: read
+  action: Do Something with permission
 </route>
