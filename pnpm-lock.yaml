@@ -6,8 +6,9 @@ specifiers:
   '@vue/tsconfig': ^0.1.3
   npm-run-all: ^4.1.5
   typescript: ~4.7.4
-  unplugin-vue-router: ^0.0.15
+  unplugin-vue-router: ^0.0.16
   vite: ^2.9.12
+  vite-plugin-vue-layouts: ^0.6.0
   vue: ^3.2.37
   vue-router: ^4.0.16
   vue-tsc: ^0.38.1
@@ -22,8 +23,9 @@ devDependencies:
   '@vue/tsconfig': 0.1.3_@types+node@16.11.43
   npm-run-all: 4.1.5
   typescript: 4.7.4
-  unplugin-vue-router: 0.0.15_d3wyp4hbvwxni62azcxym4hney
+  unplugin-vue-router: 0.0.16_d3wyp4hbvwxni62azcxym4hney
   vite: 2.9.13
+  vite-plugin-vue-layouts: 0.6.0_ecv5zhukn2wee76aswaja5pyga
   vue-tsc: 0.38.2_typescript@4.7.4
 
 packages:
@@ -301,6 +303,18 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
+
+  /debug/4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
 
   /define-properties/1.1.4:
     resolution: {integrity: sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==}
@@ -858,6 +872,10 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
+  /ms/2.1.2:
+    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: true
+
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -1162,8 +1180,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /unplugin-vue-router/0.0.15_d3wyp4hbvwxni62azcxym4hney:
-    resolution: {integrity: sha512-0gD27eAz6WHzBi9fTzX30kXMzLjw7qpAczCdPG5TpHgNUSGXeM1cR4XHgjH1qbLWSK3OSO2JciFa+ylh/NZKSA==}
+  /unplugin-vue-router/0.0.16_d3wyp4hbvwxni62azcxym4hney:
+    resolution: {integrity: sha512-W/cvWMiNRVIwV+vt2M4d8sKJNHWM1tlJLCTV7/vjgR3xVSCRdn7MyRv6gd2xcqPiGw0dRKD/qMpkghd8rEMK1w==}
     peerDependencies:
       vue-router: ^4.1.0
     peerDependenciesMeta:
@@ -1215,6 +1233,23 @@ packages:
     dependencies:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-plugin-vue-layouts/0.6.0_ecv5zhukn2wee76aswaja5pyga:
+    resolution: {integrity: sha512-7QX7o/NpCfs+hyXphwYfmPqAEQ6qd4uXsvI0VsovjGT2eCoEE5dMdP6L+uqqNWY4uqv7oCvtinecZmbzZv/9Rg==}
+    peerDependencies:
+      vite: ^2.5.0
+      vue: ^2.6.12 || ^3.2.4
+      vue-router: ^3.5.1 || ^ 4.0.11
+    dependencies:
+      '@vue/compiler-sfc': 3.2.37
+      debug: 4.3.4
+      fast-glob: 3.2.11
+      vite: 2.9.13
+      vue: 3.2.37
+      vue-router: 4.1.1_vue@3.2.37
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /vite/2.9.13:

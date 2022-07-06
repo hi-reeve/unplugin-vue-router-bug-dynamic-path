@@ -20,7 +20,8 @@ import type {
 declare module '@vue-router/routes' {
   export interface RouteNamedMap {
     'home': RouteRecordInfo<'home', '/', Record<never, never>, Record<never, never>>,
-    'dynamic-path': RouteRecordInfo<'dynamic-path', '/:path/', Record<never, never>, Record<never, never>>,
+    'dynamic-path': RouteRecordInfo<'dynamic-path', '/:path/', { path: ParamValue<true> }, { path: ParamValue<false> }>,
+    'other': RouteRecordInfo<'other', '/other', Record<never, never>, Record<never, never>>,
   }
 }
 
