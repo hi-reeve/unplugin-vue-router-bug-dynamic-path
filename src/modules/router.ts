@@ -4,8 +4,20 @@ import { setupLayouts } from "virtual:generated-layouts";
 
 export const router = createRouter({
     extendRoutes(routes) {
-        setupLayouts(routes);
-        return routes;
+		setupLayouts(routes);
+		
+		
+		return routes.map(route => {
+			if (route.name === 'home') return route
+
+			return {
+				...route,
+				meta: {
+					...route.meta,
+					auth : true
+				}
+			}
+		});
     },
     history: createWebHistory(),
 });

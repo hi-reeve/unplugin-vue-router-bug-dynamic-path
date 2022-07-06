@@ -29,7 +29,7 @@
 
 <style scoped></style>
 
-<route lang="json">
+<route>
 {
     "name": "home",
     "meta": {
