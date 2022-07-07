@@ -8,13 +8,14 @@ import Layouts from "vite-plugin-vue-layouts";
 export default defineConfig({
     plugins: [
         vue(),
-        VueRouter({
-            dts: true,
-            routesFolder: "src/pages",
-        }),
+		
         Layouts({
             defaultLayout: "default",
             layoutsDirs: "layouts",
+        }),
+        VueRouter({
+            dts: true,
+            routesFolder: "src/pages",
         }),
     ],
     resolve: {

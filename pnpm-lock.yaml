@@ -6,7 +6,7 @@ specifiers:
   '@vue/tsconfig': ^0.1.3
   npm-run-all: ^4.1.5
   typescript: ~4.7.4
-  unplugin-vue-router: ^0.0.16
+  unplugin-vue-router: ^0.0.19
   vite: ^2.9.12
   vite-plugin-vue-layouts: ^0.6.0
   vue: ^3.2.37
@@ -23,7 +23,7 @@ devDependencies:
   '@vue/tsconfig': 0.1.3_@types+node@16.11.43
   npm-run-all: 4.1.5
   typescript: 4.7.4
-  unplugin-vue-router: 0.0.16_d3wyp4hbvwxni62azcxym4hney
+  unplugin-vue-router: 0.0.19_d3wyp4hbvwxni62azcxym4hney
   vite: 2.9.13
   vite-plugin-vue-layouts: 0.6.0_ecv5zhukn2wee76aswaja5pyga
   vue-tsc: 0.38.2_typescript@4.7.4
@@ -1180,8 +1180,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /unplugin-vue-router/0.0.16_d3wyp4hbvwxni62azcxym4hney:
-    resolution: {integrity: sha512-W/cvWMiNRVIwV+vt2M4d8sKJNHWM1tlJLCTV7/vjgR3xVSCRdn7MyRv6gd2xcqPiGw0dRKD/qMpkghd8rEMK1w==}
+  /unplugin-vue-router/0.0.19_d3wyp4hbvwxni62azcxym4hney:
+    resolution: {integrity: sha512-dR72ZW6IFjWAxKbZDUVBQV91in8sexlsPjoqoOEVUzPZ3nBbSpbDyk1TW6Qu+ATj2VVGnlGIgO8tiT/wYDzIRQ==}
     peerDependencies:
       vue-router: ^4.1.0
     peerDependenciesMeta:
