@@ -9,7 +9,8 @@
 <route lang="json">
 {
   "name": "other",
-  "meta": { "hey": "hello" },
-  "layout": "other"
+  "meta": {
+    "layout": "other"
+  }
 }
 </route>

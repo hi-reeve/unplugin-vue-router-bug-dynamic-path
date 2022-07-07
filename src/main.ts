@@ -8,4 +8,4 @@ Object.values(import.meta.globEager('./modules/*.ts')).map((i) =>
 app.mount('#app')
 
 // to inspect in dev
-export { setupLayouts } from 'virtual:generated-layouts'
+// export { setupLayouts } from 'virtual:generated-layouts'
