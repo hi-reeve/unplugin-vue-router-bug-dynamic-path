@@ -32,6 +32,7 @@ declare module '@vue-router/routes' {
     'home': RouteRecordInfo<'home', '/', Record<never, never>, Record<never, never>>,
     'dynamic-path': RouteRecordInfo<'dynamic-path', '/:path/', { path: ParamValue<true> }, { path: ParamValue<false> }>,
     'other': RouteRecordInfo<'other', '/other', Record<never, never>, Record<never, never>>,
+    'user-page': RouteRecordInfo<'user-page', '/user/', Record<never, never>, Record<never, never>>,
   }
 }
 

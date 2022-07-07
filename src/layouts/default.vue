@@ -3,6 +3,9 @@
 <template>
     <div>
         <p>default Layout</p>
+		<nav>
+			Navbar
+		</nav>
         <router-view />
     </div>
 </template>

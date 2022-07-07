@@ -24,6 +24,15 @@
         To other page
       </router-link>
     </div>
+    <div>
+      <router-link
+        :to="{
+          name: 'user-page',
+        }"
+      >
+        to user page
+      </router-link>
+    </div>
   </div>
 </template>
 
