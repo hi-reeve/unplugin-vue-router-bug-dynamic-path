@@ -1,14 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div>other page</div>
+  <div>other page, should display layout</div>
 </template>
 
 <style scoped></style>
 
 <route lang="json">
 {
-    "name": "other",
+  "name": "other",
+  "meta": {
     "layout": "other"
+  }
 }
 </route>
