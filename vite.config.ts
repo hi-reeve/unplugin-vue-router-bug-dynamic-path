@@ -14,7 +14,7 @@ export default defineConfig({
     VueRouter({ routesFolder: 'src/pages' }),
     Layouts({
       defaultLayout: 'default',
-      layoutsDirs: 'layouts',
+      layoutsDirs: 'src/layouts',
     }),
     Inspect(),
   ],
