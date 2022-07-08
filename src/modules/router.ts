@@ -4,8 +4,8 @@ import { setupLayouts } from 'virtual:generated-layouts'
 
 export const router = createRouter({
   extendRoutes(routes) {
-    return setupLayouts(routes).map((route) => {
-      if (route.name === 'home') return route
+    const extendedRoutes = routes.map((route) => {
+     if (route.name === 'home') return route
 
       return {
         ...route,
@@ -13,8 +13,9 @@ export const router = createRouter({
           ...route.meta,
           auth: true,
         },
-      }
+      } 
     })
+    return setupLayouts(extendedRoutes)
   },
   history: createWebHistory(),
 })
