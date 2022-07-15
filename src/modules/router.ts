@@ -5,7 +5,14 @@ import { setupLayouts } from 'virtual:generated-layouts'
 export const router = createRouter({
   extendRoutes(routes) {
     const extendedRoutes = routes.map((route) => {
-     if (route.name === 'home') return route
+      if (route.name === 'home')
+        return {
+          ...route,
+          meta: {
+            ...route.meta,
+            layout: 'auth-layout',
+          },
+        }
 
       return {
         ...route,
@@ -13,7 +20,7 @@ export const router = createRouter({
           ...route.meta,
           auth: true,
         },
-      } 
+      }
     })
     return setupLayouts(extendedRoutes)
   },
