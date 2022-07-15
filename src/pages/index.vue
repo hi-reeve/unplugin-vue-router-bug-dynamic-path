@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
 
 <template>
   <div>
@@ -13,6 +15,18 @@
         }"
       >
         To custom path
+      </router-link>
+    </div>
+    <div>
+      <router-link
+        :to="{
+          name: 'dynamic-path',
+          params: {
+            path: encodeURIComponent('test@test.com'),
+          },
+        }"
+      >
+        To path with encoded value
       </router-link>
     </div>
     <div>
