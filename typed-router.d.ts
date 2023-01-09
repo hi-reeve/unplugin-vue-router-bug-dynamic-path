@@ -35,10 +35,10 @@ import type {
 
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
-    '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    'home': RouteRecordInfo<'home', '/', Record<never, never>, Record<never, never>>,
     'dynamic-path': RouteRecordInfo<'dynamic-path', '/:path', { path: ParamValue<true> }, { path: ParamValue<false> }>,
     'other': RouteRecordInfo<'other', '/other', Record<never, never>, Record<never, never>>,
-    '/user/': RouteRecordInfo<'/user/', '/user', Record<never, never>, Record<never, never>>,
+    'user-page': RouteRecordInfo<'user-page', '/user', Record<never, never>, Record<never, never>>,
   }
 }
 
