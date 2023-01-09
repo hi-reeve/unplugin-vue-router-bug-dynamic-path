@@ -1,5 +1,14 @@
 <script setup lang="ts">
-
+import { definePage } from 'vue-router/auto'
+definePage({
+  name: 'home',
+  meta: {
+    permission: {
+      subject: 'read',
+      action: 'Do Something with permission',
+    },
+  },
+})
 </script>
 
 <template>
@@ -51,11 +60,3 @@
 </template>
 
 <style scoped></style>
-
-<route lang="yaml">
-name: home
-meta:
-  permission:
-    subject: read
-    action: Do Something with permission
-</route>

@@ -9,9 +9,8 @@ import Inspect from 'vite-plugin-inspect'
 export default defineConfig({
   clearScreen: false,
   plugins: [
-    vue(),
-
     VueRouter({ routesFolder: 'src/pages' }),
+    vue(),
     Layouts({
       defaultLayout: 'default',
       layoutsDirs: 'src/layouts',

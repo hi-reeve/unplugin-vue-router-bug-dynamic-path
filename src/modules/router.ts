@@ -1,28 +1,45 @@
-import type { ViteSetupModule } from '@/types/ViteSetupModule'
-import { createRouter, createWebHistory } from '@vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from 'vue-router/auto'
+
 import { setupLayouts } from 'virtual:generated-layouts'
+import type { ViteSetupModule } from '@/types/ViteSetupModule'
+
+function recursiveLayouts(route: RouteRecordRaw): RouteRecordRaw {
+  if (route.children) {
+    for (let i = 0; i < route.children.length; i++) {
+      route.children[i] = recursiveLayouts(route.children[i])
+    }
+
+    return route
+  }
+
+  return setupLayouts([route])[0]
+}
 
 export const router = createRouter({
   extendRoutes(routes) {
-    const extendedRoutes = routes.map((route) => {
-      if (route.name === 'home')
-        return {
+    return routes.map((route) => {
+      // My custom extendRoutes logic, that adds a meta field to force specific pages under
+      // a given path to require auth.
+      if (route.path.includes('auth')) {
+        route = {
           ...route,
           meta: {
-            ...route.meta,
+            auth: false,
             layout: 'auth-layout',
+            ...route.meta,
           },
         }
-
-      return {
-        ...route,
-        meta: {
-          ...route.meta,
-          auth: true,
-        },
       }
+
+      // For each route, pass it to recursiveLayouts, which will apply layouts properly
+      // (without duplicating or accidentally double-wrapping components).
+
+      return recursiveLayouts(route)
     })
-    return setupLayouts(extendedRoutes)
   },
   history: createWebHistory(),
 })
